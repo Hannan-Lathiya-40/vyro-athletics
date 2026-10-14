@@ -1,0 +1,156 @@
+/* Motion system. Transforms and opacity only.
+   Hero entrance is CSS so the page still feels directed if GSAP fails. */
+
+@keyframes rise {
+  from { transform: translateY(115%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeup {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes unveil {
+  from { clip-path: inset(16% 12% 18% 14%); }
+  to { clip-path: inset(0% 0% 0% 0%); }
+}
+
+@keyframes cue {
+  0% { transform: scaleY(0); transform-origin: top; }
+  45% { transform: scaleY(1); transform-origin: top; }
+  55% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@keyframes floaty {
+  from { translate: 0 0; }
+  to { translate: 0 -8px; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes cardIn {
+  from { opacity: 0; translate: 0 22px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@keyframes drift {
+  from { transform: translate3d(-6%, -4%, 0) scale(1); }
+  to { transform: translate3d(8%, 6%, 0) scale(1.08); }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero .line,
+  .cine .line,
+  .page-hero .line {
+    animation: rise 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .hero h1 .mask:nth-child(2) .line,
+  .cine h1 .mask:nth-child(2) .line,
+  .page-hero h1 .mask:nth-child(2) .line { animation-delay: 0.12s; }
+
+  .hero h1 .mask:nth-child(3) .line,
+  .cine h1 .mask:nth-child(3) .line,
+  .page-hero h1 .mask:nth-child(3) .line { animation-delay: 0.22s; }
+
+  .hero__frame img,
+  .cine__athlete img,
+  .page-hero__media img {
+    animation: unveil 1.35s cubic-bezier(0.77, 0, 0.18, 1) both;
+  }
+
+  .cine__meta,
+  .cine__vert { animation: fadeup 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
+  .cine__lede { animation: fadeup 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; }
+  .cine__actions { animation: fadeup 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.58s both; }
+  .cine__orbit,
+  .cine__scroll { animation: fadeup 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+
+  .fade-up { animation: fadeup 0.85s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .d1 { animation-delay: 0.18s; }
+  .d2 { animation-delay: 0.32s; }
+  .d3 { animation-delay: 0.46s; }
+  .d4 { animation-delay: 0.58s; }
+
+  .hero__float { animation: floaty 4.8s ease-in-out infinite alternate; }
+  .hero__float--b { animation-delay: -1.6s; }
+
+  .scroll-cue__track span { animation: cue 1.8s ease-in-out infinite; }
+
+  .page-hero__glow { animation: drift 16s ease-in-out infinite alternate; }
+
+  .marquee__track { animation: marquee 28s linear infinite; }
+  .marquee:hover .marquee__track,
+  .marquee:focus-within .marquee__track { animation-play-state: paused; }
+
+  .product-card { animation: cardIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+  .bag-count.is-pop { animation: pop 0.35s ease; }
+}
+
+.marquee {
+  overflow: hidden;
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+}
+
+.marquee__track p {
+  margin: 0;
+  padding: 0.28em 0.2em;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6.4vw, 5.4rem);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .marquee__track p + p { display: none; }
+  .marquee__track p { white-space: normal; text-align: center; font-size: clamp(1.6rem, 8vw, 3rem); }
+
+  .hero__float,
+  .scroll-cue__track span,
+  .page-hero__glow,
+  .product-card,
+  .line,
+  .fade-up,
+  .hero__frame img,
+  .cine__athlete img,
+  .cine__meta,
+  .cine__vert,
+  .cine__lede,
+  .cine__actions,
+  .cine__orbit,
+  .cine__scroll,
+  .page-hero__media img {
+    animation: none !important;
+  }
+}
