@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VYRO Athletics — Defy the Ordinary</title>
+  <meta name="description" content="VYRO Athletics is a premium performance sportswear house. Built to outmove. Training, movement, and recovery pieces, priced in INR.">
+  <meta name="theme-color" content="#0c0d0b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="home">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="scroll-progress" role="progressbar" aria-label="Page progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="site-nav" id="siteNav">
+    <div class="site-nav__bar">
+      <a class="logo" href="index.html" aria-label="VYRO Athletics, home">
+        <svg class="logo__mark" viewBox="0 0 36 36" aria-hidden="true">
+          <path d="M4 5h7.4L18 27.2 24.6 5H32L20.2 31h-4.4L4 5z" fill="currentColor"/>
+          <path d="M14.2 5 18 15.6 21.8 5h-7.6z" fill="#d6ff3c"/>
+        </svg>
+        <span class="logo__type">
+          <span class="logo__name">Vyro</span>
+          <span class="logo__sub">Athletics</span>
+        </span>
+      </a>
+      <nav class="site-nav__links" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="products.html" data-nav="shop">Shop</a>
+        <a href="products.html?gender=men" data-nav="men">Men</a>
+        <a href="products.html?gender=women" data-nav="women">Women</a>
+        <a href="products.html?filter=new" data-nav="new">New Arrivals</a>
+      </nav>
+      <div class="site-nav__tools">
+        <button class="icon-btn" id="searchToggle" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchOverlay">
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn" id="bagToggle" type="button" aria-label="Shopping bag, 0 items" aria-controls="bagDrawer">
+          <i class="bi bi-bag" aria-hidden="true"></i>
+          <span class="bag-count" id="bagCount" data-bag-count>0</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navPanel">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-panel" id="navPanel" aria-hidden="true" inert>
+    <nav aria-label="Mobile">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="products.html" data-nav="shop">Shop</a>
+      <a href="products.html?gender=men" data-nav="men">Men</a>
+      <a href="products.html?gender=women" data-nav="women">Women</a>
+      <a href="products.html?filter=new" data-nav="new">New Arrivals</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="cine" id="top" aria-label="Intro">
+      <div class="cine__bg" aria-hidden="true">
+        <img src="assets/images/hero/hero-main.jpg" alt="" width="1800" height="1200">
+      </div>
+      <div class="cine__athlete">
+        <img src="assets/images/hero/hero-depth.jpg" alt="Athlete in a black crop and training shorts, lit against a dark field" width="1400" height="1800" fetchpriority="high" data-fallback>
+      </div>
+      <p class="cine__vert">Field 01 — Training capsule</p>
+      <div class="cine__orbit" aria-hidden="true">
+        <svg class="cine__orbit-spin" viewBox="0 0 200 200">
+          <defs>
+            <path id="vyroOrbit" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/>
+          </defs>
+          <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(243,239,230,0.28)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="58" fill="none" stroke="#d6ff3c" stroke-width="1.25"/>
+          <text fill="currentColor" font-size="11" letter-spacing="2.4">
+            <textPath href="#vyroOrbit">VYRO ATHLETICS — DEFY THE ORDINARY — </textPath>
+          </text>
+        </svg>
+        <span class="cine__orbit-mark">
+          <svg viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M4 5h7.4L18 27.2 24.6 5H32L20.2 31h-4.4L4 5z" fill="currentColor"/>
+            <path d="M14.2 5 18 15.6 21.8 5h-7.6z" fill="#d6ff3c"/>
+          </svg>
+        </span>
+      </div>
+      <div class="cine__copy">
+        <p class="eyebrow cine__meta">12.97° N — 77.59° E — SS26</p>
+        <h1>
+          <span class="mask"><span class="line">Defy</span></span>
+          <span class="mask"><span class="line cine__the">the</span></span>
+          <span class="mask"><span class="line">ordinary.</span></span>
+        </h1>
+        <p class="cine__lede">Performance engineered for those who never stand still.</p>
+        <div class="cine__actions">
+          <a class="btn btn--lime" href="products.html" data-magnetic>Explore collection <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn--ghost" href="#statement" data-magnetic>Discover the movement</a>
+        </div>
+      </div>
+      <a class="scroll-cue cine__scroll" href="#collections">
+        <span>Scroll</span>
+        <span class="scroll-cue__track" aria-hidden="true"><span></span></span>
+      </a>
+    </section>
+
+    <section class="band band--light" id="collections">
+      <div class="container-xxl">
+        <header class="section-head reveal">
+          <div>
+            <p class="eyebrow">Collections</p>
+            <h2>Three ways to <span class="serif">train.</span></h2>
+          </div>
+          <a class="text-link" href="products.html">All pieces <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </header>
+      </div>
+      <div class="collection-grid">
+        <a class="collection" data-tilt href="products.html?collection=training">
+          <div class="collection__media">
+            <img src="assets/images/collections/training.jpg" alt="Athlete driving through a floor exercise in a concrete studio">
+          </div>
+          <div class="collection__shade" aria-hidden="true"></div>
+          <div class="collection__body">
+            <span class="collection__index">01</span>
+            <h3>Training</h3>
+            <p>Load, repeat, and stay sharp between sets.</p>
+            <span class="collection__go">Explore <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+        <a class="collection" id="movement" data-tilt href="products.html?collection=movement">
+          <div class="collection__media">
+            <img src="assets/images/collections/movement.jpg" alt="Athlete in a black sports bra and shorts sprinting past a white structure">
+          </div>
+          <div class="collection__shade" aria-hidden="true"></div>
+          <div class="collection__body">
+            <span class="collection__index">02</span>
+            <h3>Movement</h3>
+            <p>Pace, flow, and the long way around.</p>
+            <span class="collection__go">Explore <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+        <a class="collection" data-tilt href="products.html?collection=recovery">
+          <div class="collection__media">
+            <img src="assets/images/collections/recovery.jpg" alt="Athlete in a sports bra and leggings holding a deep stretch">
+          </div>
+          <div class="collection__shade" aria-hidden="true"></div>
+          <div class="collection__body">
+            <span class="collection__index">03</span>
+            <h3>Recovery</h3>
+            <p>The quieter set. Restore, then go again.</p>
+            <span class="collection__go">Explore <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="engineered" id="featured">
+      <header class="engineered__head">
+        <div>
+          <p class="eyebrow">System 04</p>
+          <h2>Engineered for movement.</h2>
+        </div>
+        <a class="text-link" href="products.html">View all pieces <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </header>
+      <div class="engineered__stage" id="featuredGrid" aria-live="polite"></div>
+      <noscript><p>Enable JavaScript to load the edit.</p></noscript>
+    </section>
+
+    <section class="film" id="statement">
+      <h2 class="film__ghost">Built in motion.</h2>
+      <div class="film__back">
+        <img src="assets/images/collections/training.jpg" alt="Athlete driving through a floor exercise in a concrete studio" data-fallback>
+      </div>
+      <div class="film__front">
+        <img src="assets/images/campaigns/statement.jpg" alt="Close study of an athlete tying a training shoe" data-fallback>
+      </div>
+      <div class="film__guides" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="film__copy">
+        <p class="eyebrow">Campaign 03 — 28° studio</p>
+        <p class="film__serif">Your limits are not your identity.</p>
+        <p>A uniform for people who treat pace as a private matter. Cut close. Finished quiet. Ready before the room is.</p>
+        <a class="btn btn--lime" href="products.html?collection=movement" data-magnetic>Shop movement <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <p class="film__meta">04 layers — SS26 — Field note</p>
+    </section>
+
+    <section class="tech band" id="technology">
+      <div class="container-xxl">
+        <header class="section-head reveal">
+          <div>
+            <p class="eyebrow">Fabric system</p>
+            <h2>Engineered for the work.</h2>
+          </div>
+        </header>
+        <div class="row g-4 g-xl-5">
+          <div class="col-md-4">
+            <article class="tech__item">
+              <span class="tech__index">01</span>
+              <h3>Four-way stretch</h3>
+              <p>A soft, multi-direction knit that follows a sprint, a squat, and the stretch between them.</p>
+              <div class="tech__bar" aria-hidden="true"><span></span></div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="tech__item">
+              <span class="tech__index">02</span>
+              <h3>Moisture control</h3>
+              <p>A quick-dry face fabric designed to move sweat off the skin and keep the hand of the cloth matte.</p>
+              <div class="tech__bar" aria-hidden="true"><span></span></div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="tech__item">
+              <span class="tech__index">03</span>
+              <h3>Precision fit</h3>
+              <p>Patterned on an athletic block with a locked-in waist and room where the work actually happens.</p>
+              <div class="tech__bar" aria-hidden="true"><span></span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="campaign" id="campaign">
+      <div class="campaign__media">
+        <img src="assets/images/campaigns/permission.jpg" alt="Athlete pulling a barbell from the floor in a dark gym">
+      </div>
+      <div class="campaign__scrim" aria-hidden="true"></div>
+      <div class="campaign__copy">
+        <p class="eyebrow">Campaign 04</p>
+        <h2>
+          <span class="mask"><span class="line">Move without</span></span>
+          <span class="mask"><span class="line serif">permission.</span></span>
+        </h2>
+        <p>The work does not wait for a perfect hour. Neither does the kit.</p>
+        <a class="btn btn--lime" href="products.html" data-magnetic>Shop the edit <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <p>Defy the ordinary — Engineered for movement — Built in motion —&nbsp;</p>
+        <p>Defy the ordinary — Engineered for movement — Built in motion —&nbsp;</p>
+      </div>
+    </div>
+    <p class="visually-hidden">Defy the ordinary. Engineered for movement. Built in motion.</p>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container-xxl">
+      <div class="row gy-5">
+        <div class="col-lg-4 footer__brand">
+          <a class="logo" href="index.html" aria-label="VYRO Athletics, home">
+            <svg class="logo__mark" viewBox="0 0 36 36" aria-hidden="true">
+              <path d="M4 5h7.4L18 27.2 24.6 5H32L20.2 31h-4.4L4 5z" fill="currentColor"/>
+              <path d="M14.2 5 18 15.6 21.8 5h-7.6z" fill="#d6ff3c"/>
+            </svg>
+            <span class="logo__type">
+              <span class="logo__name">Vyro</span>
+              <span class="logo__sub">Athletics</span>
+            </span>
+          </a>
+          <p>Premium performance sportswear for people who train like it is a language. Built to outmove.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h2>Shop</h2>
+          <ul>
+            <li><a href="products.html">All products</a></li>
+            <li><a href="products.html?category=tops">Tops</a></li>
+            <li><a href="products.html?category=bottoms">Bottoms</a></li>
+            <li><a href="products.html?category=sports-bras">Sports bras</a></li>
+            <li><a href="products.html?category=accessories">Accessories</a></li>
+            <li><a href="products.html?filter=new">New arrivals</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h2>Support</h2>
+          <ul>
+            <li><button type="button" data-info="shipping">Shipping</button></li>
+            <li><button type="button" data-info="returns">Returns</button></li>
+            <li><button type="button" data-info="size">Size guide</button></li>
+            <li><button type="button" data-info="care">Garment care</button></li>
+            <li><button type="button" data-info="contact">Contact</button></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h2>Newsletter</h2>
+          <p class="fine" style="color:rgba(243,239,230,.7);margin-bottom:10px;">A local demo only. Your address stays in this browser.</p>
+          <form id="newsletterForm" novalidate>
+            <label class="visually-hidden" for="newsletterEmail">Email address</label>
+            <div class="newsletter">
+              <input id="newsletterEmail" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+              <button type="submit">Join</button>
+            </div>
+            <p id="newsletterMsg" class="form-msg" role="status"></p>
+          </form>
+          <div class="socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="footer__mark" aria-hidden="true">Vyro</p>
+      <div class="footer__legal">
+        <p>© 2026 VYRO Athletics. All rights reserved.</p>
+        <p>Front-end demonstration. No orders are placed.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-labelledby="searchLabel" aria-hidden="true" inert>
+    <button class="search-overlay__close" id="searchClose" type="button" aria-label="Close search"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+    <form id="searchForm" role="search">
+      <label id="searchLabel" class="visually-hidden" for="searchInput">Search products</label>
+      <input id="searchInput" type="search" placeholder="Search the edit" autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </form>
+  </div>
+
+  <div class="drawer" id="bagDrawer" role="dialog" aria-modal="true" aria-labelledby="bagTitle" aria-hidden="true" inert>
+    <div class="drawer__backdrop" id="bagBackdrop"></div>
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <h2 id="bagTitle">Your bag</h2>
+        <button class="icon-x" id="bagClose" type="button" aria-label="Close bag"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+      </div>
+      <div class="drawer__items" id="bagItems"></div>
+      <div class="drawer__empty" id="bagEmpty">
+        <strong>Bag is clear.</strong>
+        <p>Nothing here yet. The edit is waiting.</p>
+        <a class="btn btn--ink" href="products.html" id="continueShopping" data-continue>Continue shopping</a>
+      </div>
+      <div class="drawer__foot" id="bagFoot" hidden>
+        <div class="subtotal"><span>Subtotal</span><b id="bagSubtotal">₹0</b></div>
+        <p class="fine">Preview bag. Payment is not processed and no order is placed.</p>
+        <p class="checkout-note" id="checkoutNote" hidden>This demonstration does not take payment or place an order. Your bag stays in this browser.</p>
+        <button class="btn btn--ink btn--full" id="checkoutPreview" type="button">Checkout preview</button>
+        <a class="btn btn--line btn--full" href="products.html" data-continue>Continue shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="quickView" aria-hidden="true" inert>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="quickTitle">
+      <button class="modal__close" type="button" data-close-modal aria-label="Close quick view"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+      <div class="modal__media"><img id="quickImage" src="assets/images/fallback.svg" alt="" data-fallback></div>
+      <div class="modal__body">
+        <p class="eyebrow" id="quickCategory"></p>
+        <h2 id="quickTitle"></h2>
+        <p class="modal__price" id="quickPrice"></p>
+        <p id="quickDesc"></p>
+        <div class="choice">
+          <p>Colour</p>
+          <div id="quickColors" class="color-list"></div>
+        </div>
+        <div class="choice" id="quickSizes"></div>
+        <p class="field-error" id="quickError" role="alert"></p>
+        <div class="quick-actions">
+          <div class="qty" aria-label="Quantity">
+            <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+            <span id="quickQty">1</span>
+            <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn btn--ink" id="quickAdd" type="button">Add to bag</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--info" id="infoModal" aria-hidden="true" inert>
+    <div class="modal__backdrop" data-close-info></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+      <button class="modal__close" type="button" data-close-info aria-label="Close"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+      <h2 id="infoTitle"></h2>
+      <div id="infoBody"></div>
+    </div>
+  </div>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

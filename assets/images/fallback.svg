@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#171815"/>
+  <path d="M120 160h150l130 520 130-520h150L430 860h-60L120 160z" fill="#f4f0e8"/>
+  <path d="M340 160l60 190 60-190h-120z" fill="#d6ff3c"/>
+  <text x="80" y="940" fill="#d6ff3c" font-family="Arial, sans-serif" font-size="28" letter-spacing="8">VYRO ATHLETICS</text>
+</svg>
